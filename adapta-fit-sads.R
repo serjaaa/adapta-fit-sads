@@ -4,7 +4,7 @@ library(GenSA)
 ###################################################################################### READING DATASET
 
 ## reading tara data
-tara_data = read.csv();
+tara_data = read.csv(#INSERT);
 
 ###################################################################################### COMMAND LINE ARGUMENTS
 
