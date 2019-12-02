@@ -1,7 +1,7 @@
 
 ## Overview
 
-The repository `adapta-fit-sads` contains the R code used in to fit Species Abundance Distributions (SADs) using an adaptive cutoff on the abundances. When using this code, please acknowledge the authors by citing  [Ser-Giacomi et al. (2018)](#references).
+The repository `adapta-fit-sads` contains the R code used in to fit Species Abundance Distributions (SADs) using an adaptive cutoff on species abundances. When using this code, please acknowledge the authors by citing  [Ser-Giacomi et al. (2018)](#references).
 
 
 
@@ -14,6 +14,8 @@ This documentation is organized as follows:
 	- [Parameters inside the code](#parameters-inside-the-code)	
 - [ Running the code](#running-the-code)
 - [Outputs format](#outputs-format)
+	- [Outputs printed on screen](#outputs-printed-on-screen)
+	- [Output files](#output-files)
 - [References](#references)
 
 
@@ -88,6 +90,15 @@ where `<job_number_sample` and `<start_sample>` are two integers.
 
 
 ## Outputs format
+Here we list the outputs of the code. Some information is printed live on the screen and at the end of the program other outputs are saved as `.pdf` ad `.csv` files.
+
+#### Outputs printed on screen
+While executing the code outputs information about several variables. In particular, the best fit parameters are printed on screen along with the Kolmogorov-Smirnov distance and the p-value. The empirical and fitted cdf can be plotted live. The rank abundance distributions of single boots can be also plotted during the bootstrap. Finally, all the final parameters of the fit are printed at the end of the execution.
+
+#### Output files
+The code output two kind of files:
+- For each sampling station a `.pdf` plot is saved including the Rank Abundance Distribution, the Species Abundance Distribution and the associated fit. The cutoff determined by `final_x_max` is also plotted with solid lines. 
+- For each sampling station a `.csv` table is also saved including all the parameters of the fit.
 
 
 
@@ -96,6 +107,14 @@ where `<job_number_sample` and `<start_sample>` are two integers.
 [[Ser-Giacomi et al. 2018]](https://www.nature.com/articles/s41559-018-0587-2) Ser-Giacomi, E., Zinger, L., Malviya, S., De Vargas, C., Karsenti, E., Bowler, C., & De Monte, S. (2018). Ubiquitous abundance distribution of non-dominant plankton across the global ocean. *Nature Ecology & Evolution*, 2(8), 1243.
 
  [[Xiang et al. (2013)]](https://www.researchgate.net/profile/Sylvain_Gubian/publication/265058751_Generalized_Simulated_Annealing_for_Global_Optimization_The_GenSA_Package/links/53fdca890cf22f21c2f8470e/Generalized-Simulated-Annealing-for-Global-Optimization-The-GenSA-Package.pdf) Xiang, Y., Gubian, S., Suomela, B., & Hoeng, J. (2013). Generalized Simulated Annealing for Global Optimization: The GenSA Package. *R Journal*, 5(1).
+
+
+
+
+
+
+
+
 
 
 
