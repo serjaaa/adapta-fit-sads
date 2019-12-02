@@ -1,7 +1,7 @@
 
 ## Overview
 
-The repository `adapta-fit-sads` contains the R code used in to fit Species Abundance Distributions (SADs) using an adaptive cutoff on species abundances. When using this code, please acknowledge the authors by citing  [Ser-Giacomi et al. (2018)](#references).
+The repository `adapta-fit-sads` contains an R code designed to fit Species Abundance Distributions (SADs) associated to different ecological communities using an adaptive cutoff on species abundances. When using this code, please acknowledge the authors by citing  [Ser-Giacomi et al. (2018)](#references).
 
 
 
@@ -93,7 +93,7 @@ where `<job_number_sample` and `<start_sample>` are two integers.
 Here we list the outputs of the code. Some information is printed live on the screen and at the end of the program other outputs are saved as `.pdf` ad `.csv` files.
 
 #### Outputs printed on screen
-While executing the code outputs information about several variables. In particular, the best fit parameters are printed on screen along with the Kolmogorov-Smirnov distance and the p-value. The empirical and fitted cdf can be plotted live. The rank abundance distributions of single boots can be also plotted during the bootstrap. Finally, all the final parameters of the fit are printed at the end of the execution.
+While executing the code outputs information about several variables. In particular, the best fit parameters are printed on screen along with the Kolmogorov-Smirnov distance and the p-value. The empirical and fitted cumulative distributions can be plotted live. The rank abundance distributions of single boots can be also plotted during the bootstrap. Finally, all the final parameters of the fit are printed at the end of the execution.
 
 #### Output files
 The code output two kind of files:
