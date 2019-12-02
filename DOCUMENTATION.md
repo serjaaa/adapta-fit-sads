@@ -55,13 +55,13 @@ tara_data = read.csv(#INSERT);
 boot_reps = #INSERT
 ```
 
-- The minimum value allowed for the cutoff on the abundances i.e. the value from which the loop over increasing `x_max` starts:
+- The minimum value allowed for the cutoff on the abundances i.e. the value from which the loop over `x_max` starts:
 ```R
     ## setting starting value for x_max
     start_x_max = as.integer(#INSERT)
 ```
 
-- The maximum value allowed for the cutoff on the abundances i.e. the value at which the loop over increasing `x_max` ends:
+- The maximum value allowed for the cutoff on the abundances i.e. the value at which the loop over `x_max` ends:
 ```R
     ## setting end value for x_max
     end_x_max = as.integer(#INSERT)
@@ -82,7 +82,7 @@ boot_reps = #INSERT
 
 
 ## Running the code
-The code can be executed in the command line as follows:
+The code can be executed as follows:
 ``` bash
 Rscript adapta-fit-sads.R <job_number_sample> <start_sample>
 ```
@@ -90,15 +90,15 @@ where `<job_number_sample` and `<start_sample>` are two integers.
 
 
 ## Outputs format
-Here we list the outputs of the code. Some information is printed live on the screen and at the end of the program other outputs are saved as `.pdf` ad `.csv` files.
+Here we list the outputs of the code. Some information is printed live on the screen. Other outputs are saved as `.pdf` ad `.csv` files.
 
 #### Outputs printed on screen
 While executing the code outputs information about several variables. In particular, the best fit parameters are printed on screen along with the Kolmogorov-Smirnov distance and the p-value. The empirical and fitted cumulative distributions can be plotted live. The rank abundance distributions of single boots can be also plotted during the bootstrap. Finally, all the final parameters of the fit are printed at the end of the execution.
 
 #### Output files
 The code output two kind of files:
-- For each sampling station a `.pdf` plot is saved including the Rank Abundance Distribution, the Species Abundance Distribution and the associated fit. The cutoff determined by `final_x_max` is also plotted with solid lines. 
-- For each sampling station a `.csv` table is also saved including all the parameters of the fit.
+- For each sampling station, a `.pdf` plot that includes the Rank Abundance Distribution, the Species Abundance Distribution and the associated fit. The cutoff determined by `final_x_max` is also plotted with solid lines. 
+- For each sampling station, a `.csv` table that include all the parameters of the fit.
 
 
 
